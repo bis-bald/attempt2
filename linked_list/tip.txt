@@ -1,0 +1,4 @@
+When to loop via head and when to loop via head.next?
+- via head: when you care about the current value. Like print
+- via head.next: when you , like append a node at the end
+

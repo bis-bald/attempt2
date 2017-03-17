@@ -6,7 +6,7 @@ class Node(object):
 		self.nextNode = None
 
 class LinkedList(object):
-	def __init(self,headNode = None):
+	def __init__(self,headNode = None):
 		self.head = headNode
 	def append(self,value):
 		if self.head == None:
@@ -34,22 +34,25 @@ class LinkedList(object):
 							nextNode.nextNode
 				hasValue = 1
 				break
+			current = current.nextNode
 		if hasValue == 0:
 			print 'list does not contain value '\
 					+str(value)
 			return 
-	def print(self):
-		if head == None:
+	def printList(self):
+		if self.head == None:
 			print 'list is empty'
 			return 
 		current = self.head
-		while current.
-class testLinkedList(unittest.TestCase):
-	def test_construct(self):
-		n1 = Node(1)
-		n2 = Node(2)
-		n3 = Node(3)
-		n1.nextNode = n2
-		n2.nextNode = n3
-		ll = LinkedList(n1)
-		
+		while current != None:
+			print current.data
+			current = current.nextNode
+	def toArray(self):
+		arr = []
+		if self.head == None:
+			return arr
+		current = self.head
+		while current != None:
+			arr.append[current.data]
+			current = current.nextNode
+		return arr
